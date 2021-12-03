@@ -4,10 +4,12 @@ module.exports = {
     title: "My Gatsby Site",
   },
   plugins: [
+     "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "",
+        trackingId: "213205048",
       },
     },
   ],

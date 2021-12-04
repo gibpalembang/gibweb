@@ -2,15 +2,18 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "My Gatsby Site",
+    description: 'Ini Deskripsi yang dibuat pada gatsby config'
   },
   plugins: [
-     "gatsby-plugin-image",
+    "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: "gatsby-source-filesystem",
       options: {
-        trackingId: "213205048",
-      },
+        name: `blog`,
+        path: `${__dirname}/blog`,
+      }
     },
+    "gatsby-plugin-mdx",
   ],
 };
